@@ -1,215 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-
-    <title>Shreyansh Bordia - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="coding.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/x-icon" href="coding.ico">
+  <script src="index.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <img src="Shreyansh Picture.jpg" alt="Shreyansh Bordia"><br>
-        <div class="details">
-            <h1>Shreyansh Bordia</h1>
-            <div class="role-container">
-                <span id="role-text"></span>
-            </div>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Work Experience & Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#exp">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p> I am a fourth-year Information Science and Engineering student at B.M.S. College of Engineering with a 
-            CGPA of 9.5/10. I specialize in software development, with strong proficiency in C/C++, Python, and Java, 
-            along with web technologies like HTML, CSS, and JavaScript. Currently, during my internship at Siemens 
-            Technology, I am developing a machine learning model with 98% accuracy for real-time image inspection. 
-            Additionally, I gained advanced machine learning knowledge as a participant in the Amazon ML Summer 
-            School. Passionate about coding, I am eager to apply my skills to challenging software development projects.<br><br></p>
-    </section>
+  <section id="home" class="intro">
+    <img src="/portfolio-main/Shreyansh Picture.jpg" alt="Shreyansh Bordia" class="profile-pic">
+    <h1>Hi, I'm Shreyansh Bordia</h1>
+    <p class="roles" id="roles"></p><br>
+    <a href="/portfolio-main/SHREYANSH BORDIA Resume (1).pdf" download class="button">Resume</a><br><br><br><hr>
+    <p>I am a fourth-year Information Science and Engineering student at B.M.S. College of Engineering with a 
+        CGPA of 9.5/10. I specialize in software development, with strong proficiency in C/C++, Python, and Java, 
+        along with web technologies like HTML, CSS, and JavaScript. Currently working as Full Stack Developer at Qualcomm,
+        I am learning languages like C#, ASP.NET, .NET framework, Vue.js, Nuxt etc. During my summer internship at Siemens 
+        Technology, I developed a machine learning model with 98% accuracy for real-time image inspection. 
+        Additionally, I gained advanced machine learning knowledge as a participant in the Amazon ML Summer 
+        School. Passionate about coding, I am eager to apply my skills to challenging software development projects.</p>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="experience-item">
-            <h3>Food Ordering Mobile Application - BMSCE Food Adda</h3>
-            <p><strong>Tech Stack:</strong> XML, Kotlin, Firebase<br>
-                <strong>Objective:</strong> Developed a real-time Food Ordering Application to improve the efficiency of the ordering process for BMS College students, aiming to minimize wait times and streamline operations.<br>
-                <strong>Achievements:</strong><br>
-                1. Successfully cut down wait times, leading to a more efficient and swift food ordering experience for students.<br>
-                2. Saw a significant increase in user adoption, reflecting the app's strong appeal and effectiveness in meeting the needs of the student community.<br>
-                3. Improved user experience through advanced real-time ordering features, resulting in greater satisfaction and enhanced engagement with the app.<br>
-                <strong>Github Links: </strong><br>
-                <a href="https://github.com/Shreyansh-Bordia/BMSCE-Food-Adda">Customer Application Repository</a><br>
-                <a href="https://github.com/Shreyansh-Bordia/BMSCE-Food-Adda-Admin">Vendor/Admin Application Repository</a><br>
-                <br></p>
+  <section id="projects">
+    <h2 style="margin-left: 5%;">Projects</h2>
+    <div class="carousel-container">
+        <div class="carousel" id="projects-carousel">
+            <a href="javascript:void(0)" class="project-card" onclick="openModal('project1')"><img src="/portfolio-main/Pictures/Projects/project1.jpg" alt="Project 1" class="project-image"><p class="pname">Food Ordering Mobile Application - BMSCE Food Adda</p></a>
+            <a href="javascript:void(0)" class="project-card" onclick="openModal('project2')"><img src="/portfolio-main/Pictures/Projects/Project2.jpg" alt="Project 2" class="project-image"><p class="pname">Intrusion Detection System</p></a>
+            <a href="javascript:void(0)" class="project-card" onclick="openModal('project3')"><img src="/portfolio-main/Pictures/Projects/project3.jpg" alt="Project 3" class="project-image"><p class="pname">Text Summarizer - IUCEE (Indo Universal Collaboration for Engineering Education) Mini Course (Online)</p></a>
+            <a href="javascript:void(0)" class="project-card" onclick="openModal('project4')"><img src="/portfolio-main/Pictures/Projects/project4.jpg" alt="Project 4" class="project-image"><p class="pname">Beauty E-Commerce Website</p></a>
         </div>
-        <div class="experience-item">
-            <h3>Intrusion Detection System</h3>
-            <p><strong>Tech Stack:</strong> PCA, Random Forest, HTML, CSS, JavaScript, Twilio API<br>
-                <strong>Objective:</strong> Developed an Intrusion Detection System to enhance network security by accurately identifying and alerting on potential intrusions.<br>
-                <strong>Achievements:</strong><br>
-                1. Achieved an impressive accuracy of around 98.7% using machine learning algorithms such as PCA and Random Forest on the NSL KDD dataset, ensuring high reliability in threat detection.<br>
-                2. Implemented a comprehensive simulation of the model using HTML, CSS, and JavaScript, providing a user-friendly interface for monitoring and analysis.<br>
-                3. Integrated Twilio API to enable real-time message alerts when an intrusion is detected, improving responsiveness and security management.<br>
-                <strong>Github Links:</strong><br>
-                <a href="https://github.com/Shreyansh-Bordia/Intrusion-Detection-System">Intrusion Detection System Repository</a><br>
-                <br></p>
-        </div>
-        <div class="experience-item">
-            <h3>Text Summarizer - IUCEE (Indo Universal Collaboration for Engineering Education) Mini Course (Online)</h3>
-            <p><strong>Tech Stack:</strong> NLP, NLTK<br>
-                <strong>Objective:</strong> Developed a Text Summarizer utilizing advanced NLP techniques to condense lengthy texts and provide concise summaries.<br>
-                <strong>Achievements:</strong><br>
-                1. Successfully reduced text length by up to 60%, significantly improving the efficiency and readability of lengthy documents.<br>
-                2. Leveraged NLTK for comprehensive text preprocessing and analysis, ensuring high-quality and accurate summaries.<br>
-                3. Designed an intuitive interface for generating concise summaries, enhancing user efficiency and streamlining information retrieval.<br>
-                <br></p>
-        </div>
-        <div class="experience-item">
-            <h3>Beauty E-Commerce Website</h3>
-            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript<br>
-                <strong>Objective:</strong> Developed a basic Beauty E-Commerce Website as part of my third-semester college curriculum, showcasing beauty products and simulating the ordering process.<br>
-                <strong>Achievements:</strong><br>
-                1. Created a user-friendly interface displaying images of various beauty products, providing a visual and engaging shopping experience.<br>
-                2. Implemented a mock order placement system where users can place orders, leading to a confirmation page to simulate the completion of the transaction.<br>
-                3. Utilized basic HTML, CSS, and JavaScript to develop the site, focusing on front-end design and user interaction without database integration.<br>
-            <br></p>
-        </div>
+    </div>
 
-        <br>My project portfolio demonstrates a strong foundation in software development and a commitment to solving real-world problems. I have developed a range 
+    <!-- Modal -->
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+    <div class="modal" id="modal">
+      <div class="modal-header" id="modal-title"></div>
+      <div class="modal-body" id="modal-body"></div>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+
+     <p style="margin:2% 5% 3%;">My project portfolio demonstrates a strong foundation in software development and a commitment to solving real-world problems. I have developed a range 
         of applications, including a real-time food ordering system, an advanced intrusion detection system using machine learning, and a text summarizer leveraging NLP techniques. 
         Additionally, I created a user-friendly beauty e-commerce website. Each project highlights my ability to utilize diverse technologies and design effective solutions, 
         showcasing my dedication to improving user experiences and applying innovative approaches in software development.<br><br></p>
-    </section>
+  </section>
 
-    <section id="experience">
-        <h2>Work Experience, Trainings and Certifications</h2>
-        <div class="experience-item">
-            <h3>Summer Intern at Siemens Technology and Services Pvt. Ltd. (Jan 2024 - Present)</h3>
-            <p><strong>Tech Stack:</strong> TensorFlow, Numpy, Pandas, FastAPI<br>
-                <strong>Detailed Experience:</strong><br>
-                Developed and integrated a high-precision machine learning model with 98% accuracy into a real-time image prediction and inspection website. 
-                Utilized TensorFlow for model creation and employed Numpy and Pandas for effective data manipulation and analysis. Gained hands-on experience in implementing APIs 
-                using FastAPI, enhancing the website's functionality and performance. Additionally, executed AI-driven social media marketing strategies, resulting in a 
-                significant increase in engagement and return on investment (ROI). These experiences demonstrate my ability to apply advanced machine learning techniques, 
-                develop robust applications, and leverage AI for impactful marketing solutions.<br><br></p>
+  <section id="exp" class="exp">
+    <h2 style="margin-left: 5%;">Work Experience, Trainings and Certifications</h2>
+    <div class="exp-container">
+        <div class="carousel" id="exp-carousel" style="height: 330px;">
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp1')"><img src="/portfolio-main/Pictures/Exp/exp1.jpg" alt="Experience 1" class="project-image"><p class="pname" style="font-weight: bold;">Interim Intern at Qualcomm, India.</p><p class="pname" style="margin-top: 0;">Jan 2025 - Present</p><p class="pname" style="font-style: italic; margin-top: 0;">Tech Stack - ASP.NET MVC, Vue.js, Nuxt, Angular, .NET Framework, SQL Server</p></a>
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp2')"><img src="/portfolio-main/Pictures/Exp/exp2.jpg" alt="Experience 2" class="project-image"><p class="pname" style="font-weight: bold;">Summer Intern at Siemens Technology and Services Pvt. Ltd.</p><p class="pname" style="margin-top: 0;">Jan 2024 - Nov 2024</p><p class="pname" style="font-style: italic; margin-top: 0;">Tech Stack - HTML, CSS, Javascript, Flask, Fast API, Tensorflow, Keras</p></a>
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp3')"><img src="/portfolio-main/Pictures/Exp/exp3.jpg" alt="Experience 3" class="project-image"><p class="pname" style="font-weight: bold;">Amazon ML Summer School</p><p class="pname" style="margin-top: 0;">Sep 2023 - Oct 2023</p><p class="pname" style="font-style: italic; margin-top: 0;">Type - Summer Training Program for selected students</p></a>
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp4')"><img src="/portfolio-main/Pictures/Exp/exp4.jpg" alt="Experience 4" class="project-image"><p class="pname" style="font-weight: bold;">Ethical Hacking - Haxsploit</p><p class="pname" style="margin-top: 0;">June 2023 - Aug 2023</p><p class="pname" style="font-style: italic; margin-top: 0;">Type - Cybersecurity Training Program (Ethical Hacking) for selected students</p></a>
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp6')"><img src="/portfolio-main/Pictures/Exp/exp6.jpg" alt="Experience 5" class="project-image"><p class="pname" style="font-weight: bold;">C# and .NET Certification - LinkedIn Learning</p><p class="pname" style="margin-top: 0;">Feb 2025</p><p class="pname" style="font-style: italic; margin-top: 0;">Type - Certification for C#, and .NET framework</p></a>
+            <a href="javascript:void(0)" class="exp-card" onclick="openModal('exp5')"><img src="/portfolio-main/Pictures/Exp/exp5.jpg" alt="Experience 6" class="project-image"><p class="pname" style="font-weight: bold;">Java Master Course - Udemy</p><p class="pname" style="margin-top: 0;">March 2023</p><p class="pname" style="font-style: italic; margin-top: 0;">Type - Certification for Java Programming by Udemy</p></a>
         </div>
-        <div class="experience-item">
-            <h3>Amazon ML Summer School (Sep 2023 - Oct 2023)</h3>
-            <p> <strong>Skills Acquired:</strong> Machine Learning, Python (Programming Language), Statistics<br>
-                <strong>Overview:</strong><br>
-                The Amazon ML Summer School offered an exceptional opportunity for students to acquire Machine Learning (ML) skills and take the first significant step 
-                toward a career in this rapidly growing field. This intensive program covered crucial ML topics, and provided a thorough understanding of both foundational and advanced concepts. 
-                Participants had the unique chance to learn directly from Amazon's leading ML scientists, who brought deep expertise and cutting-edge knowledge to the curriculum.<br>
-                In 2023, the program attracted over 61,000 applicants, highlighting its competitive nature and widespread appeal. From this large pool, approximately 3,000 students were selected through 
-                a rigorous selection process, underscoring the program's high standards and the quality of its participants.<br>
-                Throughout the course, students developed essential skills in Machine Learning, Python programming, and Statistics, which prepared them for various ML roles and projects. 
-                <br>
-                <strong>Certificate:</strong><br><a href="https://drive.google.com/file/d/118JVcLcPObnmcDanYS8Us4X99GO9Vuoj/view?usp=sharing">View the Certificate</a><br><br>
-                </p>
+    </div>
+
+     <p style="margin:2% 5% 1% 5%;">My journey in the world of technology is a testament to my dedication to continuous learning and innovation. I am excited about the boundless possibilities 
+      within Information Science, Engineering, Ethical Hacking, and Artificial Intelligence / Machine Learning. I believe in the power of technology to transform lives and society positively, 
+      and I am committed to contributing my skills and knowledge to make a meaningful impact in these fields. With a thirst for knowledge and a drive to excel, I eagerly look forward to the 
+      future and the exciting opportunities it holds<br><br></p>
+  </section>
+
+  <section id="extra" class="extra">
+    <h2 style="margin-left: 5%; padding-top: 5px;">Extracurricular Involvements and Skills</h2>
+    <div class="extra-container">
+        <div class="carousel" id="extra-carousel" style="height: 330px;">
+            <a href="javascript:void(0)" class="extra-card" onclick="openModal('extra1')"><img src="/portfolio-main/Pictures/extra/ext1.png" alt="Experience 1" class="project-image" style="height: 80px;"><p class="pname" style="font-weight: bold;">Student Head of Social Media and PR Cell</p><p class="pname" style="margin-top: 0;">B.M.S. College of Engineering, Bengaluru, Karnataka</p><p class="pname" style="margin-top: 0;">June 2024 - Present</p></a>
+            <a href="javascript:void(0)" class="extra-card" onclick="openModal('extra2')"><img src="/portfolio-main/Pictures/extra/ext3.jpg" alt="Experience 2" class="project-image" style="height: 80px;"><p class="pname" style="font-weight: bold;">Student Placement Coordinator</p><p class="pname" style="margin-top: 0;">B.M.S. College of Engineering, Bengaluru, Karnataka</p><p class="pname" style="margin-top: 0;">Oct 2023 - Present</p></a>
+            <a href="javascript:void(0)" class="extra-card" onclick="openModal('extra3')"><img src="/portfolio-main/Pictures/extra/ext2.jpg" alt="Experience 3" class="project-image"><p class="pname" style="font-weight: bold;">Club President</p><p class="pname" style="margin-top: 0;">2 Clubs (Augment.AI, BMSCE and Teamcodelocked, BMSCE)</p><p class="pname" style="margin-top: 0;">Sep 2023 - Nov 2024</p></a>
+            <a href="javascript:void(0)" class="extra-card" onclick="openModal('extra4')"><img src="/portfolio-main/Pictures/extra/ext4.jpg" alt="Experience 4" class="project-image"><p class="pname" style="font-weight: bold;">Campus Ambassador</p><p class="pname" style="margin-top: 0;">DELL, Casio, HackerEarth, IIT Clubs (IIT-B, IIT-H)</p><p class="pname" style="margin-top: 0;">Sep 2022 - June 2024</p></a>
         </div>
-        <div class="experience-item">
-            <h3>Ethical Hacking - Haxsploit (June 2023 - Aug 2023)</h3>
-            <p><strong>Tech Stack:</strong> Linux, NMap, Metasploit, Port Scanner, Wireshark<br>
-                <strong>Overview:</strong><br>
-                To further augment my technical skill set, I embarked on an enriching journey to learn ethical hacking, a field that aligns with my strong sense of ethical responsibility 
-                in the digital realm. I had the privilege of receiving comprehensive training from Haxsploit, where I refined my skills in cybersecurity and the responsible use of technology.<br>
-                During my training, I worked on challenging capture the flag (CTF) assignments, successfully identifying 8 out of 10 and 9 out of 10 flags across various difficulty levels. 
-                These assignments not only tested my practical skills but also deepened my understanding of security vulnerabilities and threat mitigation.<br>
-                I was also offered an internship role in ethical hacking, which I had to decline due to time constraints. This opportunity highlighted my capabilities in the field and 
-                reinforced my commitment to cybersecurity. The experience gained from these activities has equipped me with valuable insights and skills, further solidifying my dedication to advancing 
-                in the domain of ethical hacking and cybersecurity.<br><br>
-                </p>
-        </div>
-        <div class="experience-item">
-            <h3>Java Master Course - Udemy (March 2023)</h3>
-            <p><strong>Skills Acquired:</strong> Java, JavaFX, Various Java Versions<br>
-                <strong>Overview:</strong><br>
-                In addition to my extensive programming knowledge, I completed a comprehensive 105-hour Java course on Udemy. This intensive course provided in-depth coverage of Java, a versatile and 
-                widely-used programming language. Through the course, I gained a robust understanding of Java's core concepts and advanced features, which enabled me to tackle more complex 
-                software development projects with confidence.<br>
-                The training covered a wide range of topics, including object-oriented programming, GUI development with JavaFX, and the differences between various versions of Java. 
-                This expanded expertise has enhanced my ability to develop sophisticated applications and contribute effectively to diverse software projects.<br>
-                <br></p>
-        </div>
+    </div>
 
-        <br>My journey in the world of technology is a testament to my dedication to continuous learning and innovation.
-        I
-        am excited about the boundless possibilities within Information Science, Engineering, Ethical Hacking, and
-        Artificial Intelligence / Machine Learning. I believe in the power of technology to transform lives and society positively, and
-        I
-        am committed to contributing my skills and knowledge to make a meaningful impact in these fields. With a
-        thirst
-        for knowledge and a drive to excel, I eagerly look forward to the future and the exciting opportunities it
-        holds.<br><br></p>
-    </section>
+     <p style="margin:2% 5% 5%;">My extracurricular activities have greatly enhanced my technical and leadership skills. Engaging with various tech organizations and leading college technical 
+      clubs has sharpened my project management and collaboration abilities. These experiences have deepened my understanding of industry trends and fueled my passion for software development, 
+      aligning seamlessly with my career goals.<br><br></p>
+  </section>
 
-    <section id="experience">
-        <h2>Extracurricular Involvements and Skills</h2>
-        <div class="experience-item">
-            <h3>President & Club Coordinator for of "Augment.AI" and "Team Codelocked" clubs of BMSCE (Sep 2023 - Present)</h3>
-            <p><strong>Skills Acquired:</strong> Leadership, Team Management, Project Coordination, Innovation Driving<br>
-                <strong>Overview:</strong><br>
-                In addition to my academic pursuits, I have actively engaged in leadership roles that have significantly shaped my professional development. I served as the President 
-                of Augment.AI, where I led a dynamic team in fostering innovation and driving impactful projects within the college's tech community. This role involved strategizing 
-                and overseeing initiatives that advanced our collective knowledge and skills in artificial intelligence.<br>
-                Currently, I am serving as the Club Coordinator for Team Codelocked, where I continue to apply my leadership skills to manage and coordinate various tech-related activities 
-                and events. This role has further honed my abilities in team management, project execution, and collaborative problem-solving, allowing me to contribute meaningfully to 
-                the tech ecosystem at BMS College.<br>
-                These experiences have not only enhanced my leadership capabilities but also enabled me to make a significant impact on the college's technology community, 
-                demonstrating my commitment to excellence and my ability to lead and inspire teams effectively.<br>
-                <br></p>
-        </div>
-        <div class="experience-item">
-            <h3>Campus Ambassador - Dell, Casio, Internshala etc. (Nov 2022 - May 2024)</h3>
-            <p><strong>Skills Acquired:</strong> Networking, Leadership, Event Organization, Strategic Communication<br>
-                <strong>Overview:</strong><br>
-                As a Campus Ambassador for several renowned organizations, I have had the opportunity to represent and promote their missions within my college community. My role as a Campus 
-                Ambassador for esteemed institutions such as Dell, CASIO, Internshala, Abhyuday (IIT Bombay), Saarang (IIT Madras), UpGrad, and The Bachchao Project has been both 
-                fulfilling and impactful.<br>
-                In these roles, I have been responsible for organizing events, conducting workshops, and engaging with fellow students to raise awareness about the organizations' objectives 
-                and initiatives. This experience has not only enhanced my networking skills but also enabled me to build and maintain valuable connections with a diverse range of professionals
-                 and peers. By contributing to the goals of these prestigious institutions, I have developed a deeper understanding of their missions and played a role in advancing 
-                 their reach and influence within the academic community.<br>              
-                These experiences have refined my abilities in networking and leadership, allowing me to effectively represent and promote various organizations while making a
-                 meaningful contribution to their objectives.
-                <br><br></p>
-        </div>
+  <div class="contact-section" id="contact" style="background-color: white; padding-top: 10px;">
+    <h2 style="margin-left: 5%; padding-top: 5px;">Contact Me</h2>
+    <p class="notification" id="notification">Content copied to clipboard!</p>
+    <div class ="buttons">
+      <button class="button" data-info="9214530882" id="phoneButton" onclick="copyToClipboard('9214530882')">Call</button>
+      <button class="button" data-info="bordiashreyansh01@gmail.com" id="emailButton" onclick="copyToClipboard('bordiashreyansh01@gmail.com')">Email</button>
+      <button class="button" data-info="https://www.linkedin.com/in/shreyansh-bordia-ph9214530882/"><a class="button" href="https://www.linkedin.com/in/shreyansh-bordia-ph9214530882/">LinkedIn</a></button>
+    </div>
+  </div>
 
-        <br>My extracurricular activities have greatly enhanced my technical and leadership skills. Engaging with various tech 
-        organizations and leading college technical clubs has sharpened my project management and collaboration abilities. These 
-        experiences have deepened my understanding of industry trends and fueled my passion for software development, aligning seamlessly 
-        with my career goals.<br><br></p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach out to me through the following methods:</p><br>
-        <ul>
-            <li>Email: <a href="mailto:shreyansh.is21@bmsce.ac.in">shreyansh.is21@bmsce.ac.in</a></li><br>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/shreyansh-bordia-ph9214530882/">LinkedIn Profile</a>
-            </li>
-        </ul>
-    </section>
-
-    <a href="SHREYANSH BORDIA Resume (1).pdf" download><button id="downl">Download Resume</button></a>
-
-    <footer>
-        <p>&copy; 2023 Shreyansh Bordia</p>
-    </footer>
+  <footer class="footer">
+    <p>© 2025 Shreyansh Bordia - Portfolio</p>
+  </footer>
 </body>
-
 </html>

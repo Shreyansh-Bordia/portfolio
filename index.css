@@ -1,192 +1,254 @@
-body, h1, h2, h3, p, ul, li {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+    background: #f9f9f9;
+  }
   
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fbfbfb; 
-    color: #543d3f;
-    line-height: 1.6;
+  p{
     text-align: justify;
-}
-  
-header {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-}
-  
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    opacity: 1;
-    z-index: -2;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-}
-  
-header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('background-image.jpg') no-repeat center center;
-    background-size: auto;
-    background-attachment: local;
-    opacity: 0.4;
-    z-index: -1;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-}   
-  
-header img {
-    width: 180px;
-    height: 180px;
-    border: 3px solid #ffe4dd;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-  
-h1 {
-    font-size: 28px;
-    margin-top: 10px;
-    color: #543d3f;
-}
-  
-.details h1, .details h3 {
-    color: #ffffff;
-}
+    line-height: 25px;
+  }
 
-nav ul {
-    list-style: none;
+  .pname{
+    text-align: justify;
+    line-height: 18px;
+    font-size: small;
+  }
+
+  .navbar {
+    background: #333;
+    color: white;
+    padding: 1em;
     text-align: center;
-    margin-top: 30px;
+  }
+
+  .footer {
+    background: #333;
     padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #543d3f;
-    font-size: 24px;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-    }
-
-    nav li {
-        display: block;
-        margin: 5px 0;
-    }
-}
-  
-nav a:hover {
-    border-bottom: 2px solid #ff8e72; 
-}
-  
-section {
-    margin: 40px;
-    padding: 40px;
-    background-color: #ffeadbdc; 
-    border-radius: 70px;
-}
-  
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #543d3f;
-}
-  
-button {
-    height: 5%;
-    width: 25%;
-    background-color: #ff8e72; 
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 200px;
-    cursor: pointer;
-    font-size: 25px;
-    transition: background-color 0.3s;
-    margin: 0 40px 40px 40px;
-    position: relative;
-}
-
-@media (max-width: 768px) {
-    button {
-        font-size: 20px;
-        padding: 12px 24px;
-        width: 50%;
-    }
-}
-
-@media (max-width: 480px) {
-    button {
-        font-size: 18px; 
-        padding: 10px 20px; 
-        width: 70%;
-    }
-}
-
-button:hover {
-    background-color: #fd563d; 
-}
-  
-.experience-item h3 {
-    cursor: pointer;
-    color: #ff8e72; 
-}
-  
-.experience-item h3:hover {
-    color: #fd563d;
-}
-  
-.experience-item p {
-    display: none;
-    color: #543d3f;
-}
-  
-.experience-item.open p {
-    display: block;
-}
-  
-footer {
+    color: white;
     text-align: center;
-    padding: 20px;
-    background-color: #fcefe5;
-    font-size: 14px;
-    color: #543d3f;
-}
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
   
-header h1 {
-    font-size: 36px;
-    margin-top: 10px;
-    color: #f7b3a2; 
-}
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
   
-.role-container {
+  .intro {
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .roles {
+    font-size: 20px;
+    margin: 0 0 35px 0;
+    color: #555;
+    font-style: italic;
     display: inline-block;
-    margin-top: 10px;
-    color: #f7b3a2;
-    font-size: 32px;
-} 
+    border-right: 2px solid #555; /* Cursor effect */
+    animation: blink-cursor 0.7s steps(2) infinite;
+  }
+  
+  @keyframes blink-cursor {
+    50% {
+      border-color: transparent;
+    }
+  }  
+  
+  .button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .carousel-container, .exp-container, .extra-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to ensure only 3 tabs are visible */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .exp{
+    background-color: #f4f4f4;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
 
+  .carousel {
+    display: flex;
+    height: 280px;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); /* Initial position */
+  }
+  
+  .project-card, .exp-card, .extra-card {
+    display: flex;
+    flex-direction: column; /* Arrange image and text vertically */
+    justify-content: center; /* Center contents vertically */
+    align-items: center;
+    flex: 0 0 14%; /* Ensure each card takes up 30% of the container width */
+    text-decoration: none; /* Remove underline on links */
+    color: inherit;
+    margin: 0 50px;
+    height: 210px;
+    padding: 0 20px 0 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0.6; /* Default opacity for inactive cards */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .exp-card{
+    background-color: #ffffff;
+    flex: 0 0 16%;
+    height: 260px;
+    padding-top: 10px;
+  }
+
+  .extra-card {
+    height: 220px;
+    flex: 0 0 16%;
+    padding-top: 10px;
+  }
+  
+  .project-card.active, .exp-card.active, .extra-card.active {
+    transform: scale(1.1); /* Enlarge the active card */
+    opacity: 1; /* Full opacity for the active card */
+  }
+  
+  .project-card:not(.active), .exp-card:not(.active), .extra-card:not(.active) {
+    transform: scale(0.9); /* Shrink inactive cards */
+  }
+
+  .project-image{
+    width: 100px;
+    height: 100px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .modal.active {
+    display: block;
+  }
+
+  .modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .modal-body {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .button {
+    margin-bottom: 130px;
+    padding: 10px 20px;
+    width: 150px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative; /* This is essential for the ::after pseudo-element */
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button::after {
+    content: attr(data-info);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevents interaction */
+  }
+  
+  .button:hover::after {
+    opacity: 1; /* Makes the tooltip visible */
+  }
+  
+  .notification {
+    margin-top: 20px;
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+  }
+  
