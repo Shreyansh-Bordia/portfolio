@@ -5,6 +5,10 @@ body {
     box-sizing: border-box;
     background: #f9f9f9;
   }
+
+html,body{
+    overflow-x: hidden;
+}
   
   p{
     text-align: justify;
